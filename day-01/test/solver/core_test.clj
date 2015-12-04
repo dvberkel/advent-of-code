@@ -2,6 +2,10 @@
   (:require [clojure.test :refer :all]
             [solver.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest determine-floor-test
+  (testing "should determine correct floor"
+    (is (= (determine-floor "(())")    0))
+    (is (= (determine-floor "(((")     3))
+    (is (= (determine-floor "))(((((") 3))
+    (is (= (determine-floor ")))")     -3))
+    (is (= (determine-floor ")())())") -3))))

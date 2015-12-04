@@ -3,8 +3,7 @@
 
 (defn determine-floor [word]
   "Determines which floor Santa should deliver presents"
-  (let [freq (frequencies word)]
-    (- (freq \()) (freq \))))
+  (let [freqs (frequencies word)] (- (get freqs \( 0) (get freqs \) 0))))
 
 (defn -main
   "I don't do a whole lot ... yet."
