@@ -4,5 +4,5 @@
 
 (deftest a-paper
   (testing "it should determine amount of paper from dimensions"
-    (is (= (paper 2 3 4) 58))
-    (is (= (paper 1 1 10) 43))))
+    (is (= (paper [2 3 4]) 58))
+    (is (= (paper [1 1 10]) 43))))
