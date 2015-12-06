@@ -5,6 +5,7 @@
   "description": "Solver for Advent of Code puzzle 4",
   "main": "index.js",
   "scripts": {
+    "main": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
