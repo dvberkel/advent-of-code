@@ -1,0 +1,24 @@
+{
+  "name": "day-04",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Solver for Advent of Code puzzle 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dvberkel/advent-of-code.git"
+  },
+  "keywords": [
+    "advent",
+    "code"
+  ],
+  "author": "Daan van Berkel (daan.v.berkel.1980@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dvberkel/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/dvberkel/advent-of-code#readme"
+}
