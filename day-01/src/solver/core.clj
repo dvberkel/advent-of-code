@@ -11,4 +11,6 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println (determine-floor (clojure.string/split (slurp "input") #""))))
+  (let [directions (clojure.string/split (slurp "input") #"")]
+    (println (determine-floor directions))))
+
