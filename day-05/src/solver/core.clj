@@ -16,8 +16,20 @@
    (not
     (contains-forbidden-string word))))
 
+(defn contains-repeated-pair [word]
+  (re-find #"(\w{2})\w*\1" word))
+(defn contains-palindrome-trigram [word]
+  (re-find #"(\w)\w\1" word))
+
+(defn nice-word2 [word]
+  (and
+   (contains-repeated-pair word)
+   (contains-palindrome-trigram word)))
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
   (with-open [rdr (clojure.java.io/reader "input")]
-    (println (count (filter nice-word (line-seq rdr))))))
+    (let [words (line-seq rdr)] 
+      (println (count (filter nice-word words)))
+      (println (count (filter nice-word2 words))))))
