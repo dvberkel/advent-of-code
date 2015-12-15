@@ -25,6 +25,16 @@
                             (map act-on-row (take difference (drop low grid)))
                             (drop high grid))))))
 
+(defn on [a b c d grid]
+  (let [action (fn [_] true)]
+    (act-on action grid a b c d))) 
+(defn off [a b c d grid]
+  (let [action (fn [_] false)]
+    (act-on action grid a b c d))) 
+(defn toggle [a b c d grid]
+  (let [action (fn [x] (not x))]
+    (act-on action grid a b c d))) 
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
